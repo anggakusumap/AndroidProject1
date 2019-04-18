@@ -29,14 +29,23 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
     private ArrayList<String> mImages = new ArrayList<>();
     private ArrayList<String> mImageDesc = new ArrayList<>();
     private ArrayList<String> mImageDet = new ArrayList<>();
+    private ArrayList<String> posisi = new ArrayList<>();
+    private ArrayList<String> tempat = new ArrayList<>();
+    private ArrayList<String> nomor = new ArrayList<>();
 
     private Context mContext;
 
-    public RecycleViewAdapter(Context mContext,ArrayList<String> mImageNames, ArrayList<String> mImages, ArrayList<String> mImageDesc , ArrayList<String> mImageDet ) {
+    public RecycleViewAdapter(Context mContext,ArrayList<String> mImageNames,
+                              ArrayList<String> mImages, ArrayList<String> mImageDesc ,
+                              ArrayList<String> mImageDet, ArrayList<String> posisi,
+                              ArrayList<String> tempat, ArrayList<String> nomor) {
         this.mImageNames = mImageNames;
         this.mImages = mImages;
         this.mImageDesc = mImageDesc;
         this.mImageDet = mImageDet;
+        this.posisi = posisi;
+        this.tempat = tempat;
+        this.nomor = nomor;
         this.mContext = mContext;
     }
 
@@ -58,6 +67,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
                 .into(holder.image);
         holder.imageName.setText(mImageNames.get(i));
         holder.imageDesc.setText(mImageDesc.get(i));
+//        holder.nomor.setText(nomor.get(i));
 
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,8 +77,12 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
 
                 Intent intent = new Intent(mContext, GalleryActivity.class);
                 intent.putExtra("image_url",mImages.get(i));
+                intent.putExtra("image_desc",mImageDesc.get(i));
                 intent.putExtra("image_name",mImageNames.get(i));
-                intent.putExtra("image_desc",mImageDet.get(i));
+                intent.putExtra("image_det",mImageDet.get(i));
+                intent.putExtra("posisi",posisi.get(i));
+                intent.putExtra("tempat",tempat.get(i));
+                intent.putExtra("nomor",nomor.get(i));
                 mContext.startActivity(intent);
             }
         });
@@ -107,6 +121,9 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
         ImageView image;
         TextView imageName;
         TextView imageDesc;
+        TextView posisi;
+        TextView tempat;
+        TextView nomor;
         CardView parentLayout;
 
 
@@ -116,6 +133,9 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
             image = itemView.findViewById(R.id.image);
             imageName = itemView.findViewById(R.id.image_name);
             imageDesc = itemView.findViewById(R.id.image_desc);
+            posisi = itemView.findViewById(R.id.posisi);
+            tempat = itemView.findViewById(R.id.tempat);
+            nomor = itemView.findViewById(R.id.nomor);
             parentLayout = itemView.findViewById(R.id.parent_layout);
             btnFavorite = itemView.findViewById(R.id.btn_set_favorite);
             btnShare = itemView.findViewById(R.id.btn_set_share);

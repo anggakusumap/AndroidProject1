@@ -29,14 +29,23 @@ public class ListActivity extends RecyclerView.Adapter<ListActivity.ViewHolder> 
     private ArrayList<String> mImages = new ArrayList<>();
     private ArrayList<String> mImageDesc = new ArrayList<>();
     private ArrayList<String> mImageDet = new ArrayList<>();
+    private ArrayList<String> posisi = new ArrayList<>();
+    private ArrayList<String> tempat = new ArrayList<>();
+    private ArrayList<String> nomor = new ArrayList<>();
 
     private Context mContext;
 
-    public ListActivity(Context mContext,ArrayList<String> mImageNames, ArrayList<String> mImages, ArrayList<String> mImageDesc , ArrayList<String> mImageDet ) {
+    public ListActivity(Context mContext,ArrayList<String> mImageNames,
+                        ArrayList<String> mImages, ArrayList<String> mImageDesc ,
+                        ArrayList<String> mImageDet,ArrayList<String> posisi,
+                        ArrayList<String> tempat, ArrayList<String> nomor ) {
         this.mImageNames = mImageNames;
         this.mImages = mImages;
         this.mImageDesc = mImageDesc;
         this.mImageDet = mImageDet;
+        this.posisi = posisi;
+        this.tempat = tempat;
+        this.nomor = nomor;
         this.mContext = mContext;
     }
 
@@ -68,7 +77,11 @@ public class ListActivity extends RecyclerView.Adapter<ListActivity.ViewHolder> 
                 Intent intent = new Intent(mContext, GalleryActivity.class);
                 intent.putExtra("image_url",mImages.get(i));
                 intent.putExtra("image_name",mImageNames.get(i));
-                intent.putExtra("image_desc",mImageDet.get(i));
+                intent.putExtra("image_desc",mImageDesc.get(i));
+                intent.putExtra("image_det",mImageDet.get(i));
+                intent.putExtra("posisi",posisi.get(i));
+                intent.putExtra("tempat",tempat.get(i));
+                intent.putExtra("nomor",nomor.get(i));
                 mContext.startActivity(intent);
             }
         });
@@ -92,6 +105,9 @@ public class ListActivity extends RecyclerView.Adapter<ListActivity.ViewHolder> 
         ImageView image;
         TextView imageName;
         TextView imageDesc;
+        TextView posisi;
+        TextView tempat;
+        TextView nomor;
         RelativeLayout parentLayout;
 
 
@@ -101,6 +117,9 @@ public class ListActivity extends RecyclerView.Adapter<ListActivity.ViewHolder> 
             image = itemView.findViewById(R.id.gambar);
             imageName = itemView.findViewById(R.id.nama);
             imageDesc = itemView.findViewById(R.id.deskripsi);
+            posisi = itemView.findViewById(R.id.posisi);
+            tempat = itemView.findViewById(R.id.tempat);
+            nomor = itemView.findViewById(R.id.nomor);
             parentLayout = itemView.findViewById(R.id.list);
         }
     }
