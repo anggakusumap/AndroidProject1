@@ -99,7 +99,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/posisi"
                 android:text="Posisi"
-
                 android:textColor="#000"/>
         </TableRow>
 

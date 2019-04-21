@@ -16,6 +16,9 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
     private String title = "Mode List";
+    final String STATE_TITLE = "state_string";
+    final String STATE_MODE = "state_mode";
+    int mode;
 
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<String> mDesc = new ArrayList<>();
@@ -31,6 +34,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate:started.");
         initImageBitmaps();
+
+        if (savedInstanceState == null) {
+            setActionBarTitle("Mode List");
+            showRecyleList();
+            mode = R.id.action_list;
+        } else {
+            String stateTitle = savedInstanceState.getString(STATE_TITLE);
+            int stateMode = savedInstanceState.getInt(STATE_MODE);
+            setActionBarTitle(stateTitle);
+            setMode(stateMode);
+        }
+
     }
 
     private void initImageBitmaps() {
@@ -107,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.recyclerv_view);
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        RecycleViewAdapter adapter = new RecycleViewAdapter(this, mNames, mImageUrls, mDesc, mImageDet, posisi, tempat, nomor);
+        CardActivity adapter = new CardActivity(this, mNames, mImageUrls, mDesc, mImageDet, posisi, tempat, nomor);
         recyclerView.setAdapter(adapter);
     }
 
@@ -137,25 +152,40 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
+        setMode(item.getItemId());
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void setMode(int selectedMode) {
+        String title = null;
+        switch (selectedMode) {
             case R.id.action_list:
-                setActionBarTitle("Mode List");
+                title = "Mode List";
                 showRecyleList();
                 break;
+
             case R.id.action_grid:
-                setActionBarTitle("Mode Grid");
+                title = "Mode Grid";
                 showRecyclerGrid();
                 break;
+
             case R.id.action_cardview:
-                setActionBarTitle("Mode Card View");
+                title = "Mode CardView";
                 initRecyclerView();
                 break;
         }
-        return super.onOptionsItemSelected(item);
+        mode = selectedMode;
+        setActionBarTitle(title);
     }
 
     private void setActionBarTitle(String title) {
         getSupportActionBar().setTitle(title);
 
+    }
+
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(STATE_TITLE, getSupportActionBar().getTitle().toString());
+        outState.putInt(STATE_MODE, mode);
     }
 }

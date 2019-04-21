@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,7 +20,7 @@ import java.util.ArrayList;
 
 
 
-public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.ViewHolder> {
+public class CardActivity extends RecyclerView.Adapter<CardActivity.ViewHolder> {
 
     private static final String TAG = "RecycleViewAdapter";
 
@@ -35,7 +34,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
 
     private Context mContext;
 
-    public RecycleViewAdapter(Context mContext,ArrayList<String> mImageNames,
+    public CardActivity(Context mContext,ArrayList<String> mImageNames,
                               ArrayList<String> mImages, ArrayList<String> mImageDesc ,
                               ArrayList<String> mImageDet, ArrayList<String> posisi,
                               ArrayList<String> tempat, ArrayList<String> nomor) {
@@ -51,11 +50,12 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
+    public CardActivity.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_listitem,parent,false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
+
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int i) {
