@@ -118,7 +118,6 @@ public class CardActivity extends RecyclerView.Adapter<CardActivity.ViewHolder> 
             image = itemView.findViewById(R.id.image);
             imageName = itemView.findViewById(R.id.image_name);
             imageDesc = itemView.findViewById(R.id.image_desc);
-            posisi = itemView.findViewById(R.id.posisi);
             tempat = itemView.findViewById(R.id.tempat);
             nomor = itemView.findViewById(R.id.nomor);
             parentLayout = itemView.findViewById(R.id.cardview1);

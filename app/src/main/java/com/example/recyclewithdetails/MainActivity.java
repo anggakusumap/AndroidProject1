@@ -74,10 +74,10 @@ public class MainActivity extends AppCompatActivity {
         mImageUrls.add("https://media.travelingyuk.com/wp-content/uploads/2018/07/Nasi-Ayam-Kedewatan-Ibu-Mangku-di-Bali-Kenikmatan-Melegenda-Sejak-1960-an-1.jpg");
         mNames.add("Nasi Ayam Kedewatan Ibu Mangku");
         mDesc.add("Ubud");
-        mImageDet.add("24 Juni 1987");
+        mImageDet.add("Nasi campur Warung ibu Mangku yaitu terdiri dari ayam betutu suir, sambal matah, jukut sayuran / urapan, sambal cabe goreng dicampur dengan minyak kelapa, telor pindang Bali juga dilengkapi dengan sate lilit");
         posisi.add("Penyerang");
-        tempat.add("Rosario,Argentina");
-        nomor.add("10");
+        tempat.add("Jl. Kayu Jati no.12 Ubud");
+        nomor.add("Rp. 25.000,-");
 
         mImageUrls.add("http://bali.panduanwisata.id/files/2012/03/warung-bu-komang-bali.jpg");
         mNames.add("Warung Bu Komang");

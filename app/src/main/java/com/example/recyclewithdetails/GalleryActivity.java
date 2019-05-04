@@ -49,10 +49,6 @@ public class GalleryActivity extends AppCompatActivity {
         num.setText(nomor);
         TextView tmp = findViewById(R.id.tempat);
         tmp.setText(tempat);
-        TextView pos = findViewById(R.id.posisi);
-        pos.setText(posisi);
-        TextView desc = findViewById(R.id.klub);
-        desc.setText(imageDet);
 
         ImageView image = findViewById(R.id.image);
         Glide.with(this)
