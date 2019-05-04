@@ -51,7 +51,7 @@ public class CardActivity extends RecyclerView.Adapter<CardActivity.ViewHolder> 
     @NonNull
     @Override
     public CardActivity.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_listitem,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_card1,parent,false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
@@ -86,20 +86,7 @@ public class CardActivity extends RecyclerView.Adapter<CardActivity.ViewHolder> 
                 mContext.startActivity(intent);
             }
         });
-        holder.btnFavorite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.d(TAG,"onClick: clicked on: "+ mImageNames.get(i));
-                Toast.makeText(mContext, "Favorite"+mImageNames.get(i),Toast.LENGTH_SHORT).show();
-            }
-        });
-        holder.btnShare.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.d(TAG,"onClick: clicked on: "+ mImageNames.get(i));
-                Toast.makeText(mContext, "Share"+ mImageNames.get(i),Toast.LENGTH_SHORT).show();
-            }
-        });
+
 
 
     }
@@ -116,8 +103,6 @@ public class CardActivity extends RecyclerView.Adapter<CardActivity.ViewHolder> 
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
-        Button btnFavorite;
-        Button btnShare;
         ImageView image;
         TextView imageName;
         TextView imageDesc;
@@ -136,9 +121,7 @@ public class CardActivity extends RecyclerView.Adapter<CardActivity.ViewHolder> 
             posisi = itemView.findViewById(R.id.posisi);
             tempat = itemView.findViewById(R.id.tempat);
             nomor = itemView.findViewById(R.id.nomor);
-            parentLayout = itemView.findViewById(R.id.parent_layout);
-            btnFavorite = itemView.findViewById(R.id.btn_set_favorite);
-            btnShare = itemView.findViewById(R.id.btn_set_share);
+            parentLayout = itemView.findViewById(R.id.cardview1);
         }
     }
 }
