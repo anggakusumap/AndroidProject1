@@ -117,7 +117,6 @@ public class ListActivity extends RecyclerView.Adapter<ListActivity.ViewHolder> 
             image = itemView.findViewById(R.id.gambar);
             imageName = itemView.findViewById(R.id.nama);
             imageDesc = itemView.findViewById(R.id.deskripsi);
-            posisi = itemView.findViewById(R.id.posisi);
             tempat = itemView.findViewById(R.id.tempat);
             nomor = itemView.findViewById(R.id.nomor);
             parentLayout = itemView.findViewById(R.id.list);

@@ -27,12 +27,16 @@
             <Button
                 android:id="@+id/btn1"
                 style="@style/Widget.AppCompat.Button"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="110dp"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="138sp"
+                android:background="@color/colorSeeAll"
                 android:onClick="next"
-                android:text="see all"
-                android:textAllCaps="false" />
+                android:padding="10dp"
+                android:text="See All ->"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="#FFF" />
         </LinearLayout>
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
@@ -58,11 +62,17 @@
 
             <Button
                 android:id="@+id/btn2"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="110dp"
-                android:text="see all"
-                android:textAllCaps="false" />
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="140sp"
+                android:background="@color/colorSeeAll"
+                android:onClick="next"
+                android:padding="10dp"
+                android:text="See All ->"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="#FFF" />
         </LinearLayout>
     <android.support.v7.widget.RecyclerView
         android:layout_below="@id/recyclerv_view"
@@ -88,11 +98,17 @@
 
             <Button
                 android:id="@+id/btn3"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="110dp"
-                android:text="see all"
-                android:textAllCaps="false" />
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="140sp"
+                android:background="@color/colorSeeAll"
+                android:onClick="next"
+                android:padding="10dp"
+                android:text="See All ->"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:textColor="#FFF" />
         </LinearLayout>
         <android.support.v7.widget.RecyclerView
             android:layout_below="@id/recyclerv_view"
