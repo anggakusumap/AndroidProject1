@@ -1,5 +1,6 @@
 package com.example.recyclewithdetails;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -9,6 +10,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         initImageBitmaps();
 
         if (savedInstanceState == null) {
-            setActionBarTitle("Mode List");
+            setActionBarTitle("Home");
             initRecyclerView();
             mode = R.id.action_cardview;
         } else {
@@ -61,6 +63,11 @@ public class MainActivity extends AppCompatActivity {
             setMode(stateMode);
         }
 
+    }
+
+    public void next(View view){
+        Intent log = new Intent(this,ListView.class);
+        startActivity(log);
     }
 
     private void initImageBitmaps() {
@@ -196,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void showRecyleList() {
-        RecyclerView recyclerView = findViewById(R.id.recyclerv_view);
+        RecyclerView recyclerView = findViewById(R.id.recyclerv_view4);
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         ListActivity adapter = new ListActivity(this, mNames, mImageUrls, mDesc, mImageDet,posisi, tempat, nomor);
@@ -229,7 +236,7 @@ public class MainActivity extends AppCompatActivity {
         String title = null;
         switch (selectedMode) {
             case R.id.action_list:
-                title = "Mode List";
+                title = "Home";
                 showRecyleList();
                 break;
 
@@ -239,7 +246,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.action_cardview:
-                title = "Mode CardView";
+                title = "Home";
                 initRecyclerView();
                 break;
         }
