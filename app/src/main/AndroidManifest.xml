@@ -7,19 +7,18 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Football Player"
+        android:label="Pakar Makanan"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
+
         <activity android:name=".LocationActivity">
-=======
-        <activity android:name=".ListView"></activity>
-        <activity android:name=".MainActivity">
->>>>>>> fbd2fba5992c1b93fc87e3d890beff6af649778f
 
         </activity>
+
+        <activity android:name=".ListView"></activity>
         <activity android:name=".MainActivity"></activity>
+
         <activity android:name=".GalleryActivity" />
         <activity
             android:name=".SplashActivity"
