@@ -68,7 +68,7 @@ public class ListActivity extends RecyclerView.Adapter<ListActivity.ViewHolder> 
         holder.imageName.setText(mImageNames.get(i));
         holder.imageDesc.setText(mImageDesc.get(i));
 
-        holder.parentLayout.setOnClickListener(new View.OnClickListener() {
+        holder.tampil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d(TAG,"onClick: clicked on: "+ mImageNames.get(i));
@@ -108,7 +108,7 @@ public class ListActivity extends RecyclerView.Adapter<ListActivity.ViewHolder> 
         TextView posisi;
         TextView tempat;
         TextView nomor;
-        RelativeLayout parentLayout;
+        CardView tampil;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -119,7 +119,7 @@ public class ListActivity extends RecyclerView.Adapter<ListActivity.ViewHolder> 
             imageDesc = itemView.findViewById(R.id.deskripsi);
             tempat = itemView.findViewById(R.id.tempat);
             nomor = itemView.findViewById(R.id.nomor);
-            parentLayout = itemView.findViewById(R.id.list);
+            tampil = itemView.findViewById(R.id.gasaka);
         }
     }
 }

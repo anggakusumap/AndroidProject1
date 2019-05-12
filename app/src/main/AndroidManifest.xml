@@ -11,14 +11,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".LocationActivity">
-
-        </activity>
-
-        <activity android:name=".ListView"></activity>
-        <activity android:name=".MainActivity"></activity>
-
+        <activity
+            android:name=".SateDetail"
+            android:label="@string/title_activity_sate_detail"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".HighestRating"
+            android:label="@string/title_activity_highest_rating"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".KategoriSatu"
+            android:label="@string/title_activity_kategori_satu"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Navigation"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Discover" />
+        <activity android:name=".LocationActivity" />
+        <activity android:name=".ListView" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".GalleryActivity" />
         <activity
             android:name=".SplashActivity"
@@ -29,7 +41,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
