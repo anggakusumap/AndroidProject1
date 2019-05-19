@@ -49,7 +49,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate:started.");
+
         initImageBitmaps();
+
+
     }
 
     public void next(View view){
@@ -165,6 +168,38 @@ public class MainActivity extends AppCompatActivity {
         recyclerView1.setAdapter(adapter);
         recyclerView2.setAdapter(adapter2);
 
+    }
+    private void initRecyclerView1() {
+
+        RecyclerView recyclerView1 = findViewById(R.id.recyclerv_view1);
+        recyclerView1.setNestedScrollingEnabled(false);
+        recyclerView1.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
+        Card1Activity adapter = new Card1Activity(this, mNames, mImageUrls, mDesc, mImageDet, posisi, tempat, nomor);
+        recyclerView1.setAdapter(adapter);
+
+    }
+
+
+    private void showRecyleList() {
+        RecyclerView recyclerView = findViewById(R.id.recyclerv_view4);
+        recyclerView.setHasFixedSize(false);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        ListActivity adapter = new ListActivity(this, mNames, mImageUrls, mDesc, mImageDet,posisi, tempat, nomor);
+        recyclerView.setAdapter(adapter);
+
+    }
+
+    private void showRecyclerGrid() {
+        RecyclerView recyclerView = findViewById(R.id.recyclerv_view);
+        recyclerView.setHasFixedSize(false);
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        GridActivity adapter = new GridActivity(this, mImageUrls);
+        recyclerView.setAdapter(adapter);
+
+    }
+
+    private void setActionBarTitle(String title) {
+        getSupportActionBar().setTitle(title);
     }
 
     protected void onSaveInstanceState(Bundle outState) {
