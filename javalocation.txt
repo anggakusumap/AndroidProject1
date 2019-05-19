@@ -60,29 +60,4 @@ public class LocationActivity extends AppCompatActivity  {
         startActivity(i);
     }
 
-    public void singaraja(View view){
-        Intent i = new Intent(this, Singaraja.class);
-        startActivity(i);
-    }
-
-    public void jembrana(View view){
-        Intent i = new Intent(this, Jembrana.class);
-        startActivity(i);
-    }
-
-    public void bangli(View view){
-        Intent i = new Intent(this, Bangli.class);
-        startActivity(i);
-    }
-
-    public void karangasem(View view){
-        Intent i = new Intent(this, Karangasem.class);
-        startActivity(i);
-    }
-
-    public void gianyar(View view){
-        Intent i = new Intent(this, Gianyar.class);
-        startActivity(i);
-    }
-
 }

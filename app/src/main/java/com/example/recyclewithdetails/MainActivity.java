@@ -52,16 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
         initImageBitmaps();
 
-        if (savedInstanceState == null) {
-            setActionBarTitle("Home");
-            initRecyclerView();
-            mode = R.id.action_cardview;
-        } else {
-            String stateTitle = savedInstanceState.getString(STATE_TITLE);
-            int stateMode = savedInstanceState.getInt(STATE_MODE);
-            setActionBarTitle(stateTitle);
-            setMode(stateMode);
-        }
 
     }
 
@@ -208,43 +198,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        setMode(item.getItemId());
-        return super.onOptionsItemSelected(item);
-    }
-
-    public void setMode(int selectedMode) {
-        String title = null;
-        switch (selectedMode) {
-            case R.id.action_list:
-                title = "Home";
-                showRecyleList();
-                break;
-
-            case R.id.action_grid:
-                title = "Mode Grid";
-                showRecyclerGrid();
-                break;
-
-            case R.id.action_cardview:
-                title = "Home";
-                initRecyclerView();
-                break;
-        }
-        mode = selectedMode;
-        setActionBarTitle(title);
-    }
-
     private void setActionBarTitle(String title) {
         getSupportActionBar().setTitle(title);
-
     }
 
     protected void onSaveInstanceState(Bundle outState) {

@@ -230,7 +230,7 @@ public class Navigation extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.navigation, menu);
+
         return true;
     }
 
@@ -242,9 +242,7 @@ public class Navigation extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -259,6 +257,8 @@ public class Navigation extends AppCompatActivity
             // Handle the camera action
 
         } else if (id == R.id.nav_slideshow){
+            Intent i = new Intent(this, LocationActivity.class);
+            startActivity(i);
 
         } else if (id == R.id.nav_share) {
 

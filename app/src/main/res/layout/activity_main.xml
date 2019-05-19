@@ -28,23 +28,14 @@
                 android:id="@+id/btn1"
                 style="@style/Widget.AppCompat.Button"
                 android:layout_width="65dp"
-<<<<<<< HEAD
                 android:layout_height="27dp"
                 android:layout_marginLeft="138sp"
-=======
-                android:layout_height="35dp"
-                android:layout_marginLeft="170sp"
->>>>>>> b569f1c9aebd5a251491a4aa2ca328068944a210
                 android:background="@color/colorSeeAll"
                 android:onClick="next"
                 android:padding="10dp"
                 android:text="See All ->"
                 android:textAllCaps="false"
-<<<<<<< HEAD
                 android:textColor="#009688"
-=======
-                android:textColor="#FFF"
->>>>>>> b569f1c9aebd5a251491a4aa2ca328068944a210
                 android:textSize="14sp" />
         </LinearLayout>
     <android.support.v7.widget.RecyclerView
