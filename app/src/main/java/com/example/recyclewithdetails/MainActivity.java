@@ -7,10 +7,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 
 import java.util.ArrayList;
 
@@ -189,14 +186,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void showRecyclerGrid() {
-        RecyclerView recyclerView = findViewById(R.id.recyclerv_view);
-        recyclerView.setHasFixedSize(false);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        GridActivity adapter = new GridActivity(this, mImageUrls);
-        recyclerView.setAdapter(adapter);
-
-    }
+//    private void showRecyclerGrid() {
+//        RecyclerView recyclerView = findViewById(R.id.recyclerv_view);
+//        recyclerView.setHasFixedSize(false);
+//        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+//        GridActivity adapter = new GridActivity(this, mImageUrls1, mImageUrls);
+//        recyclerView.setAdapter(adapter);
+//
+//    }
 
     private void setActionBarTitle(String title) {
         getSupportActionBar().setTitle(title);
