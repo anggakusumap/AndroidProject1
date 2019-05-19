@@ -22,7 +22,7 @@ import java.util.ArrayList;
 public class Navigation extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private String title = "Mode List";
+    private String title = "Pakar Makanan";
     final String STATE_TITLE = "state_string";
     final String STATE_MODE = "state_mode";
     int mode;
@@ -34,13 +34,16 @@ public class Navigation extends AppCompatActivity
     private ArrayList<String> posisi = new ArrayList<>();
     private ArrayList<String> tempat = new ArrayList<>();
     private ArrayList<String> nomor = new ArrayList<>();
+    private ArrayList<Float> rating = new ArrayList<>();
+
     private ArrayList<String> mNames1 = new ArrayList<>();
     private ArrayList<String> mDesc1 = new ArrayList<>();
     private ArrayList<String> mImageUrls1 = new ArrayList<>();
     private ArrayList<String> mImageDet1 = new ArrayList<>();
-    private ArrayList<String> posisi1 = new ArrayList<>();
     private ArrayList<String> tempat1 = new ArrayList<>();
     private ArrayList<String> nomor1 = new ArrayList<>();
+    private ArrayList<Float> rating1 = new ArrayList<>();
+
     private ArrayList<String> mNames2 = new ArrayList<>();
     private ArrayList<String> mDesc2 = new ArrayList<>();
     private ArrayList<String> mImageUrls2 = new ArrayList<>();
@@ -48,6 +51,7 @@ public class Navigation extends AppCompatActivity
     private ArrayList<String> posisi2 = new ArrayList<>();
     private ArrayList<String> tempat2 = new ArrayList<>();
     private ArrayList<String> nomor2 = new ArrayList<>();
+    private ArrayList<Float> rating2 = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,14 +61,7 @@ public class Navigation extends AppCompatActivity
         initImageBitmaps();
 
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -72,14 +69,11 @@ public class Navigation extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+        setActionBarTittle(title);
     }
 
 
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putString(STATE_TITLE, getSupportActionBar().getTitle().toString());
-        outState.putInt(STATE_MODE, mode);
-    }
+
 
 
     private void initImageBitmaps() {
@@ -87,97 +81,82 @@ public class Navigation extends AppCompatActivity
         mNames.add("Nasi Ayam Kedewatan Ibu Mangku");
         mDesc.add("Ubud");
         mImageDet.add("Nasi campur Warung ibu Mangku yaitu terdiri dari ayam betutu suir, sambal matah, jukut sayuran / urapan, sambal cabe goreng dicampur dengan minyak kelapa, telor pindang Bali juga dilengkapi dengan sate lilit");
-        posisi.add("Penyerang");
         tempat.add("Jl. Kayu Jati no.12 Ubud");
         nomor.add("Rp. 25.000,-");
+        rating.add((float)4.2);
 
-        mImageUrls.add("http://bali.panduanwisata.id/files/2012/03/warung-bu-komang-bali.jpg");
-        mNames.add("Warung Bu Komang");
+        mImageUrls.add("https://4.bp.blogspot.com/-Avs1pdyc3eM/VT78mHiWy1I/AAAAAAAAE5I/4BrHlLWsxtw/s1600/20150220_133220.jpg");
+        mNames.add("Siobak Khe Lok");
         mDesc.add("Singaraja");
-        mImageDet.add("Februari");
-        posisi.add("Penyerang");
-        tempat.add("Portugal");
-        nomor.add("7");
+        mImageDet.add("Dalam proses pembuatannya, daging babi diolah dengan cara direbus dan dicampur dengan kecap manis serta kecap asin. Tidak ketinggalan, juga perlu menambahkan beragam jenis rempah-rempah. ");
+        tempat.add("Jalan Surapati No.66, Buleleng");
+        nomor.add("Rp. 35.000,-");
+        rating.add((float)4);
 
-        mImageUrls.add("https://www.piesusubliman.com/wp-content/uploads/2018/08/Warung-Nasi-Bali-Ibu-Sayu.jpg");
-        mNames.add("Warung Nasi Bali Ibu Sayu");
+        mImageUrls.add("https://media-cdn.tripadvisor.com/media/photo-s/0f/bf/1e/6e/babi-guling-slingsing.jpg");
+        mNames.add("Babi Guling Slingsing Bu Suci");
         mDesc.add("Tabanan");
-        mImageDet.add("Februari");
-        posisi.add("Penyerang Sayap");
-        tempat.add("Mesir");
-        nomor.add("10");
+        mImageDet.add("Babi Guling Slingsing memiliki pelanggan bukan hanya warga lokal saja, bahkan wisatawan luar daerah dan mancanegara sering makan di warung ini");
+        tempat.add("Jl. Desa Cepaka No.33, Cepaka, Kediri, Kabupaten Tabanan, ");
+        nomor.add("Rp 25.000,-");
+        rating.add((float)3.5);
 
-        mImageUrls.add("http://isrilcaniago.weebly.com/uploads/1/0/6/1/106122351/ayam-betutu-men-tempeh-3_orig.png");
+        mImageUrls.add("https://balikami.com/wp-content/uploads/2017/10/Betutu-Men-Tempeh.jpg");
         mNames.add("Ayam Betutu Men Tempeh");
         mDesc.add("Jembrana");
-        mImageDet.add("Februari");
-        posisi.add("Penyerang");
-        tempat.add("Brazil");
-        nomor.add("10");
+        mImageDet.add("Untuk paket seharga Rp 60.000 anda akan mendapatkan seperempat ayam betutu, 1 bakul nasi, 1 porsi sayur, sambal dan kacang. Sedangkan jika memilih paket seharga Rp 114.000 anda akan mendaptakan 1 ayam betutu, 1 bakul nasi, 1 porsi sayur, sambal dan kacang.");
+        tempat.add("Jl. Raya Gilimanuk, Melaya, Jembrana ");
+        nomor.add("Rp 60.000,-");
+        rating.add((float)5);
 
-        mImageUrls.add("https://cdn.qubicle.id/images/2018/10/03/604cbcdd-982d-4675-b89f-016590f7ba4c.jpg");
-        mNames.add("Warung Lesehan Merta Sari");
-        mDesc.add("Klungkung");
-        mImageDet.add("Februari");
-        posisi.add("Penyerang");
-        tempat.add("Perancis");
-        nomor.add("7");
+        mImageUrls1.add("https://balikami.com/wp-content/uploads/2017/10/Betutu-Men-Tempeh.jpg");
+        mNames1.add("Babi Guling Surya Agung");
+        mDesc1.add("Jembrana");
+        mImageDet1.add("Warung Surya Agung Babi Guling menyediakan menu babi guling dengan cita rasa yang berbeda dari cita rasa babi guling yang lain.");
+        tempat1.add("Jl. Yudistira Jembrana ");
+        nomor1.add("Rp 30.000,-");
+        rating1.add((float)4.5);
 
-        mImageUrls.add("https://media-cdn.tripadvisor.com/media/photo-s/0f/73/f5/28/fb-img-1496380561303.jpg");
-        mNames.add("Nasi Ayam Bu Oki");
-        mDesc.add("Badung");
-        mImageDet.add("Februari");
-        posisi.add("Winger");
-        tempat.add("Belgia");
-        nomor.add("10");
-
-        mImageUrls1.add("https://cdn.water-sport-bali.com/wp-content/uploads/2012/11/menu-ibu-oka-ubud.jpg");
-        mNames1.add("Babi Guling Bu Oka");
-        mDesc1.add("Ubud");
-        mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
-        tempat1.add("Rosario,Argentina");
-        nomor1.add("10");
+        mImageUrls1.add("https://www.tripsavvy.com/thmb/_pbV3fLDF_ZJiTyNf5EUFUu9nG4=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/babi-guling_ibu-oka-58351a243df78c6f6acce39c.jpg");
+        mNames1.add("Babi Guling Ibu Oka");
+        mDesc1.add("Gianyar");
+        mImageDet1.add("Babi Guling terkenal dari Ubud Gianyar ini berhasil menjadi ikon kuliner di Ubud. Pengunjung Babi Guling kebanyakan wisatawan-wisatawan asing yang sedang berada di Ubud.");
+        tempat1.add("Jalan Tegal Sari No. 2, Ubud Tengah, Ubud, Kabupaten Gianyar ");
+        nomor1.add("Rp 50.000,-");
+        rating1.add((float)4);
 
         mImageUrls1.add("https://www.goodindonesianfood.com/story/wp-content/uploads/2016/05/bali-heritage-babi-guling-candra1-1170x780.jpg");
         mNames1.add("Babi Guling Candra");
         mDesc1.add("Denpasar");
-        mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
-        tempat1.add("Rosario,Argentina");
-        nomor1.add("10");
+        mImageDet1.add("Untuk seporsi nasi babi guling special, terdiri dari sepiring nasi putih, semangkuk sup dan sepiring penuh hasil olahan babi. Ada sate babi yang rasanya manis, daging babi yang disuwir, paru, usus, kerupuk kulit, kulit babi yang kres kres dan sayuran yang dimasak dengan bumbu Bali..");
+        tempat1.add("Jalan Teuku Umar no 140");
+        nomor1.add("Rp. 30.000,-");
+        rating1.add((float)5);
 
-        mImageUrls1.add("https://cdn.idntimes.com/content-images/post/20151223/slingsing-2da33ed8de1acce828ed43803489133e.PNG");
-        mNames1.add("Babi Guling Slingsing");
-        mDesc1.add("Tabanan");
-        mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
-        tempat1.add("Rosario,Argentina");
-        nomor1.add("10");
-
-        mImageUrls2.add("https://www.goodindonesianfood.com/story/wp-content/uploads/2016/05/editors-note-sate-babi-bawah-pohon-1170x780.jpg");
+        mImageUrls2.add("https://b.zmtcdn.com/data/pictures/6/1704596/91dc322cd871009a998eda10606a4477_featured_v2.jpg");
         mNames2.add("Sate Babi Bawah Pohon");
-        mDesc2.add("Kuta");
-        mImageDet2.add("24 Juni 1987");
-        posisi2.add("Penyerang");
-        tempat2.add("Rosario,Argentina");
-        nomor2.add("10");
+        mDesc2.add("Badung");
+        mImageDet2.add("Sate Babi Bawah Pohon menyediakan menu utama yaitu sate babi dan sate lilit. Selain itu juga menyediakan siobak babi, soto babi dan juga pepes. ");
+        tempat2.add("Jl. Campuhan I - Dewi Sri No.IV, Legian, Kuta");
+        nomor2.add("Rp. 25.000,-");
+        rating2.add((float)4.7);
 
-        mImageUrls2.add("http://nomnombali.com/wp-content/uploads/2019/03/0000_0000_00000000351-02-01-e1552286091372-1170x827.jpeg");
-        mNames2.add("Sate Plecing Mak Lukluk");
-        mDesc2.add("Dalung");
-        mImageDet2.add("24 Juni 1987");
-        posisi2.add("Penyerang");
-        tempat2.add("Rosario,Argentina");
-        nomor2.add("10");
+        mImageUrls2.add("https://media.travelingyuk.com/wp-content/uploads/2018/05/Sate-Bik-Ngah.jpg");
+        mNames2.add("Sate Bik Ngah");
+        mDesc2.add("Singaraja");
+        mImageDet2.add("Sate bik ngah sudah terkenal sejak tahun 1960. Jenis sate yang ditawarkan juga banyak, diantaranya adalah sate sapi, sate sapi manis, sate kakul dan sate serapah.");
+        tempat2.add("Jalan Surapati, Singaraja");
+        nomor2.add("Rp. 15.000,-");
+        rating2.add((float)4);
 
-        mImageUrls2.add("https://lh3.googleusercontent.com/1jk_nwpU1yQnjBhA-D8uaHiHElRGX5PYz9s5ULE32DW8JL8Pt_-cbXNPoreVGIgcCSkcdlqG=w1080-h608-p-no-v0");
-        mNames2.add("Sate Ayam Babi Oka");
-        mDesc2.add("Denpasar");
-        mImageDet2.add("24 Juni 1987");
-        posisi2.add("Penyerang");
-        tempat2.add("Rosario,Argentina");
-        nomor2.add("10");
+        mImageUrls2.add("https://gungrangga.files.wordpress.com/2017/07/sate-ikan-pantai-lebih.jpg");
+        mNames2.add("Sate Lebih Gianyar ");
+        mDesc2.add("Gianyar");
+        mImageDet2.add("Sate di pantai lebih merupakan salah satu sate ikan legendaris Bali.");
+        tempat2.add("Jl. Prof. Dr. Ida Bagus Mantra, Gianyar, Bali");
+        nomor2.add("Rp 20.000,-");
+        rating2.add((float)3.5);
+
         initRecyclerView();
 
     }
@@ -208,9 +187,9 @@ public class Navigation extends AppCompatActivity
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         recyclerView1.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         recyclerView2.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
-        CardActivity adapter1 = new CardActivity(this, mNames, mImageUrls, mDesc, mImageDet, posisi, tempat, nomor);
-        Card1Activity adapter = new Card1Activity(this, mNames1, mImageUrls1, mDesc1, mImageDet1, tempat1, nomor1);
-        Card2Activity adapter2 = new Card2Activity(this, mNames2, mImageUrls2, mDesc2, mImageDet2, posisi2, tempat2, nomor2);
+        CardActivity adapter1 = new CardActivity(this, mNames, mImageUrls, mDesc, mImageDet, posisi, tempat, nomor, rating);
+        Card1Activity adapter = new Card1Activity(this, mNames1, mImageUrls1, mDesc1, mImageDet1, tempat1, nomor1, rating1);
+        Card2Activity adapter2 = new Card2Activity(this, mNames2, mImageUrls2, mDesc2, mImageDet2, tempat2, nomor2, rating2);
         recyclerView.setAdapter(adapter1);
         recyclerView1.setAdapter(adapter);
         recyclerView2.setAdapter(adapter2);
@@ -225,6 +204,10 @@ public class Navigation extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
+    }
+
+    private void setActionBarTittle(String tittle){
+        getSupportActionBar().setTitle(tittle);
     }
 
     @Override

@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,23 +27,25 @@ public class Card2Activity extends RecyclerView.Adapter<Card2Activity.ViewHolder
     private ArrayList<String> mImages2 = new ArrayList<>();
     private ArrayList<String> mImageDesc2 = new ArrayList<>();
     private ArrayList<String> mImageDet2 = new ArrayList<>();
-    private ArrayList<String> posisi2 = new ArrayList<>();
     private ArrayList<String> tempat2 = new ArrayList<>();
     private ArrayList<String> nomor2 = new ArrayList<>();
+    private ArrayList<Float> rating2 = new ArrayList<>();
 
     private Context mContext2;
 
     public Card2Activity(Context mContext2, ArrayList<String> mImageNames2,
                          ArrayList<String> mImages2, ArrayList<String> mImageDesc2 ,
-                         ArrayList<String> mImageDet2, ArrayList<String> posisi2,
-                         ArrayList<String> tempat2, ArrayList<String> nomor2) {
+                         ArrayList<String> mImageDet2,
+                         ArrayList<String> tempat2, ArrayList<String> nomor2,
+                         ArrayList<Float> rating2) {
         this.mImageNames2 = mImageNames2;
         this.mImages2 = mImages2;
         this.mImageDesc2 = mImageDesc2;
         this.mImageDet2 = mImageDet2;
-        this.posisi2 = posisi2;
+
         this.tempat2 = tempat2;
         this.nomor2 = nomor2;
+        this.rating2 = rating2;
         this.mContext2 = mContext2;
     }
 
@@ -78,9 +81,9 @@ public class Card2Activity extends RecyclerView.Adapter<Card2Activity.ViewHolder
                 intent.putExtra("image_desc",mImageDesc2.get(i));
                 intent.putExtra("image_name",mImageNames2.get(i));
                 intent.putExtra("image_det",mImageDet2.get(i));
-                intent.putExtra("posisi",posisi2.get(i));
                 intent.putExtra("tempat",tempat2.get(i));
                 intent.putExtra("nomor",nomor2.get(i));
+                intent.putExtra("rating",rating2.get(i));
                 mContext2.startActivity(intent);
             }
         });
@@ -107,6 +110,7 @@ public class Card2Activity extends RecyclerView.Adapter<Card2Activity.ViewHolder
         TextView posisi;
         TextView tempat;
         TextView nomor;
+        RatingBar rating;
         CardView parentLayout;
 
 
@@ -118,6 +122,7 @@ public class Card2Activity extends RecyclerView.Adapter<Card2Activity.ViewHolder
             imageDesc = itemView.findViewById(R.id.image_desc);
             tempat = itemView.findViewById(R.id.tempat);
             nomor = itemView.findViewById(R.id.nomor);
+            rating = itemView.findViewById(R.id.ratingBar);
             parentLayout = itemView.findViewById(R.id.cardview);
         }
     }

@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,20 +29,24 @@ public class Card1Activity extends RecyclerView.Adapter<Card1Activity.ViewHolder
     private ArrayList<String> mImageDet1 = new ArrayList<>();
     private ArrayList<String> tempat1 = new ArrayList<>();
     private ArrayList<String> nomor1 = new ArrayList<>();
+    private ArrayList<Float> rating1 = new ArrayList<>();
 
     private Context mContext1;
 
     public Card1Activity(Context mContext1, ArrayList<String> mImageNames1,
-                         ArrayList<String> mImages1, ArrayList<String> mImageDesc1 ,
+                         ArrayList<String> mImages1,
+                         ArrayList<String> mImageDesc1 ,
                          ArrayList<String> mImageDet1,
-                         ArrayList<String> tempat1, ArrayList<String> nomor1) {
+                         ArrayList<String> tempat1,
+                         ArrayList<String> nomor1,
+                         ArrayList<Float> rating1) {
         this.mImageNames1 = mImageNames1;
         this.mImages1 = mImages1;
         this.mImageDesc1 = mImageDesc1;
         this.mImageDet1 = mImageDet1;
-
         this.tempat1 = tempat1;
         this.nomor1 = nomor1;
+        this.rating1 = rating1;
         this.mContext1 = mContext1;
     }
 
@@ -79,11 +84,10 @@ public class Card1Activity extends RecyclerView.Adapter<Card1Activity.ViewHolder
                 intent.putExtra("image_det",mImageDet1.get(i));
                 intent.putExtra("tempat",tempat1.get(i));
                 intent.putExtra("nomor",nomor1.get(i));
+                intent.putExtra("rating",rating1.get(i));
                 mContext1.startActivity(intent);
             }
         });
-
-
 
     }
 
@@ -102,7 +106,7 @@ public class Card1Activity extends RecyclerView.Adapter<Card1Activity.ViewHolder
         ImageView image;
         TextView imageName;
         TextView imageDesc;
-        TextView posisi;
+        RatingBar rating;
         TextView tempat;
         TextView nomor;
         CardView parentLayout;
@@ -116,6 +120,7 @@ public class Card1Activity extends RecyclerView.Adapter<Card1Activity.ViewHolder
             imageDesc = itemView.findViewById(R.id.image_desc);
             tempat = itemView.findViewById(R.id.tempat);
             nomor = itemView.findViewById(R.id.nomor);
+            rating = itemView.findViewById(R.id.ratingBar);
             parentLayout = itemView.findViewById(R.id.cardview);
         }
     }

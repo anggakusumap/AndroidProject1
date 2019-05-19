@@ -1,63 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="70"
-        android:id="@+id/image"
-        android:scaleType="centerCrop"
-        android:src="@mipmap/ic_launcher"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:background="@color/colorAccent"
-        android:padding="5dp"
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/img_desc"
-        android:textStyle="bold"
-        android:text="Messi"
-        android:textColor="#fff"
-        android:textSize="24sp" />
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher" />
 
-    <TextView
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/img_det"
-        android:text="Deskripsi Makanan"
-        android:textSize="18sp"
-        android:textColor="#000"/>
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:id="@+id/img_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Messi"
+                android:textColor="#000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tempat"
-        android:text="Alamat"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:textColor="#807171"/>
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"/>
 
-    <TextView
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/nomor"
-        android:textSize="22sp"
-        android:text="Harga"
-        android:textColor="@color/colorAccent"/>
+            <TextView
+                android:id="@+id/tempat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat"
+                android:textColor="#807171"
+                android:textSize="18sp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"/>
 
-    <RatingBar
-        android:layout_gravity="center"
-        android:id="@+id/ratingBar"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"/>
-</LinearLayout>
+            <TextView
+                android:id="@+id/nomor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Harga"
+                android:textColor="@color/colorAccent"
+                android:textSize="22sp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/img_det"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:text="Deskripsi Makanan"
+                android:textColor="#000"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+
+</ScrollView>

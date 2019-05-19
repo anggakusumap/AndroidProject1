@@ -9,9 +9,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,19 +29,21 @@ public class ListActivity extends RecyclerView.Adapter<ListActivity.ViewHolder> 
     private ArrayList<String> mImageDesc = new ArrayList<>();
     private ArrayList<String> mImageDet = new ArrayList<>();
     private ArrayList<String> tempat = new ArrayList<>();
+    private ArrayList<Float> rating = new ArrayList<>();
     private ArrayList<String> nomor = new ArrayList<>();
 
     private Context mContext;
 
-    public ListActivity(Context mContext,ArrayList<String> mImageNames,
+    public ListActivity(Context mContext, ArrayList<String> mImageNames,
                         ArrayList<String> mImages, ArrayList<String> mImageDesc ,
                         ArrayList<String> mImageDet,
-                        ArrayList<String> tempat, ArrayList<String> nomor ) {
+                        ArrayList<String> tempat, ArrayList<String> nomor,
+                        ArrayList<Float> rating) {
         this.mImageNames = mImageNames;
         this.mImages = mImages;
         this.mImageDesc = mImageDesc;
         this.mImageDet = mImageDet;
-
+        this.rating = rating;
         this.tempat = tempat;
         this.nomor = nomor;
         this.mContext = mContext;
@@ -78,9 +79,9 @@ public class ListActivity extends RecyclerView.Adapter<ListActivity.ViewHolder> 
                 intent.putExtra("image_name",mImageNames.get(i));
                 intent.putExtra("image_desc",mImageDesc.get(i));
                 intent.putExtra("image_det",mImageDet.get(i));
-
                 intent.putExtra("tempat",tempat.get(i));
                 intent.putExtra("nomor",nomor.get(i));
+                intent.putExtra("rating", rating.get(i));
                 mContext.startActivity(intent);
             }
         });
@@ -104,7 +105,7 @@ public class ListActivity extends RecyclerView.Adapter<ListActivity.ViewHolder> 
         ImageView image;
         TextView imageName;
         TextView imageDesc;
-
+        RatingBar rating;
         TextView tempat;
         TextView nomor;
         CardView tampil;
@@ -119,6 +120,7 @@ public class ListActivity extends RecyclerView.Adapter<ListActivity.ViewHolder> 
             tempat = itemView.findViewById(R.id.tempat);
             nomor = itemView.findViewById(R.id.nomor);
             tampil = itemView.findViewById(R.id.gasaka);
+            rating = itemView.findViewById(R.id.ratingBar);
         }
     }
 }

@@ -11,7 +11,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/sate"
+        android:src="@drawable/satay"
         android:scaleType="centerCrop"
         android:id="@+id/gambar2"/>
 

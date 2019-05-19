@@ -18,6 +18,7 @@ public class Bangli extends AppCompatActivity {
     private ArrayList<String> mImageDet1 = new ArrayList<>();
     private ArrayList<String> tempat1 = new ArrayList<>();
     private ArrayList<String> nomor1 = new ArrayList<>();
+    private ArrayList<Float> rating1 = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +53,7 @@ public class Bangli extends AppCompatActivity {
         mImageDet1.add("Warung Midori adalah salah satu warung makan yang menawarkan menu andalannya yaitu Mujair Nyat-Nyat.");
         tempat1.add("Jl. Merdeka no. 108B, Bangli ");
         nomor1.add("Rp 43.000,-");
+        rating1.add((float)4);
 
         mImageUrls1.add("https://www.kintamani.id/wp-content/uploads/Rumah-Makan-Pak-Bagung-Bali-1-1024x683.jpg");
         mNames1.add("Warung Pak Bagong");
@@ -59,6 +61,7 @@ public class Bangli extends AppCompatActivity {
         mImageDet1.add("Sajian nila yang diberikan di tempat ini juga disertai dengan bumbu-bumbu yang membuatnya terasa begitu lezat. Secara khusus, nyatnyat merupakan cara memasak ikan nila dan mujair yang digoreng kering.");
         tempat1.add("Jl. LC Subak Aya, Bebalang, Bangli ");
         nomor1.add("Rp 40.000,-");
+        rating1.add((float)3);
 
 
         showRecyleList();
@@ -68,7 +71,7 @@ public class Bangli extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.lokasi_bangli);
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        ListActivity adapter = new ListActivity(this, mNames1, mImageUrls1, mDesc1, mImageDet1,tempat1, nomor1);
+        ListActivity adapter = new ListActivity(this, mNames1, mImageUrls1, mDesc1, mImageDet1,tempat1, nomor1, rating1);
         recyclerView.setAdapter(adapter);
 
     }

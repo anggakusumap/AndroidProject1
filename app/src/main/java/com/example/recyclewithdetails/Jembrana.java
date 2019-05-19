@@ -17,9 +17,9 @@ public class Jembrana extends AppCompatActivity {
     private ArrayList<String> mDesc1 = new ArrayList<>();
     private ArrayList<String> mImageUrls1 = new ArrayList<>();
     private ArrayList<String> mImageDet1 = new ArrayList<>();
-
     private ArrayList<String> tempat1 = new ArrayList<>();
     private ArrayList<String> nomor1 = new ArrayList<>();
+    private ArrayList<Float> rating1 = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +54,7 @@ public class Jembrana extends AppCompatActivity {
         mImageDet1.add("Untuk paket seharga Rp 60.000 anda akan mendapatkan seperempat ayam betutu, 1 bakul nasi, 1 porsi sayur, sambal dan kacang. Sedangkan jika memilih paket seharga Rp 114.000 anda akan mendaptakan 1 ayam betutu, 1 bakul nasi, 1 porsi sayur, sambal dan kacang.");
         tempat1.add("Jl. Raya Gilimanuk, Melaya, Jembrana ");
         nomor1.add("Rp 60.000,-");
+        rating1.add((float)4.7);
 
         mImageUrls1.add("https://balikami.com/wp-content/uploads/2017/10/Betutu-Men-Tempeh.jpg");
         mNames1.add("Surya Agung Babi Guling");
@@ -61,7 +62,7 @@ public class Jembrana extends AppCompatActivity {
         mImageDet1.add("Warung Surya Agung Babi Guling menyediakan menu babi guling dengan cita rasa yang berbeda dari cita rasa babi guling yang lain.");
         tempat1.add("Jl. Yudistira Jembrana ");
         nomor1.add("Rp 30.000,-");
-
+        rating1.add((float)4);
 
 
         showRecyleList();
@@ -71,7 +72,7 @@ public class Jembrana extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.lokasi_jembrana);
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        ListActivity adapter = new ListActivity(this, mNames1, mImageUrls1, mDesc1, mImageDet1, tempat1, nomor1);
+        ListActivity adapter = new ListActivity(this, mNames1, mImageUrls1, mDesc1, mImageDet1, tempat1, nomor1, rating1);
         recyclerView.setAdapter(adapter);
 
     }
