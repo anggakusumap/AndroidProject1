@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Badung">
+    tools:context=".Klungkung">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/lokasi_badung"
+        android:id="@+id/lokasi_klungkung"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />

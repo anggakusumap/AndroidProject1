@@ -16,7 +16,7 @@ public class Tabanan extends AppCompatActivity {
     private ArrayList<String> mDesc1 = new ArrayList<>();
     private ArrayList<String> mImageUrls1 = new ArrayList<>();
     private ArrayList<String> mImageDet1 = new ArrayList<>();
-    private ArrayList<String> posisi1 = new ArrayList<>();
+
     private ArrayList<String> tempat1 = new ArrayList<>();
     private ArrayList<String> nomor1 = new ArrayList<>();
     @Override
@@ -45,13 +45,43 @@ public class Tabanan extends AppCompatActivity {
     }
 
     private void setGambar(){
-        mImageUrls1.add("https://cdn.idntimes.com/content-images/post/20151223/slingsing-2da33ed8de1acce828ed43803489133e.PNG");
-        mNames1.add("Babi Guling Slingsing");
+        mImageUrls1.add("https://media.travelingyuk.com/wp-content/uploads/2018/11/Sekian-Tempat-Kuliner-Legendaris-di-Tabanan-Bali-Ada-yang-Sejak-1938-Lho-4.jpg");
+        mNames1.add("Nasi Lawar Asri Jambe");
         mDesc1.add("Tabanan");
-        mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
-        tempat1.add("Rosario,Argentina");
-        nomor1.add("10");
+        mImageDet1.add("Nasi lawar di sini disajikan komplit bersama dengan be manis atau olahan daging babi seperti rendang, daging cincang babi, tum, daging suwir, sate lilit, kerupuk babi, dan semangkuk kuah kaldu. ");
+        tempat1.add("Jl. Jalak Putih No. 1, Tabanan");
+        nomor1.add("Rp 30.000,-");
+
+        mImageUrls1.add("https://media.travelingyuk.com/wp-content/uploads/2018/11/Sekian-Tempat-Kuliner-Legendaris-di-Tabanan-Bali-Ada-yang-Sejak-1938-Lho-3.jpg");
+        mNames1.add("Laklak Biu Men Bayu");
+        mDesc1.add("Tabanan");
+        mImageDet1.add("Laklak Biu ini merupakan kuliner berbahan dasar kelapa parut, tepung terigu, tepung beras, tepung kanji dan juga pisang yang dipotong tipis-tipis.");
+        tempat1.add("Jl. Raya Babahan Sengaan No. 13, Penebel, Tabanan");
+        nomor1.add("Rp 10.000,-");
+
+        mImageUrls1.add("https://paonwimas.files.wordpress.com/2018/03/img_5537.jpg?w=696");
+        mNames1.add("Sate Babi Cengolo");
+        mDesc1.add("Tabanan");
+        mImageDet1.add("Sate Babi Cengolo ini cenderung manis rasanya. Karena dicampur bumbu kacang dan kecap. Potongan dagingnya juga tidak terlalu besar jadi empuk banget pas digigit gak alot sama sekali");
+        tempat1.add("Jl. Yeh Gangga, Sudimara, Tabanan, Bali. ");
+        nomor1.add("Rp 20.000,-");
+
+
+
+        mImageUrls1.add("https://3.bp.blogspot.com/-47ZQrI_FcDw/V_zt8PrHAKI/AAAAAAAAAYs/xPIVgfqJIq81QbiReeMleiPRs4-yYLpKwCLcB/s1600/sate-soto-babat-warung-sepek-tabanan-1.jpg");
+        mNames1.add("Soto Babad Warung Eri");
+        mDesc1.add("Tabanan");
+        mImageDet1.add(" Soto Babad Warung Eri menyuguhkan olahan soto babad yang dibuat dari resep turun temurun. Ciri khasnya terletak pada kuah kaldunya yang guring, dan tekstur daging yang tidak alot");
+        tempat1.add("Jl. Kaswari, Dauh Peken, Kec. Tabanan, Kabupaten Tabanan");
+        nomor1.add("Rp 20.000,-");
+
+        mImageUrls1.add("https://media-cdn.tripadvisor.com/media/photo-s/0f/bf/1e/6e/babi-guling-slingsing.jpg");
+        mNames1.add("Babi Guling Slingsing Bu Suci");
+        mDesc1.add("Tabanan");
+        mImageDet1.add("Babi Guling Slingsing memiliki pelanggan bukan hanya warga lokal saja, bahkan wisatawan luar daerah dan mancanegara sering makan di warung ini");
+        tempat1.add("Jl. Desa Cepaka No.33, Cepaka, Kediri, Kabupaten Tabanan, ");
+        nomor1.add("Rp 25.000,-");
+
 
         showRecyleList();
     }
@@ -60,7 +90,7 @@ public class Tabanan extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.lokasi_tabanan);
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        ListActivity adapter = new ListActivity(this, mNames1, mImageUrls1, mDesc1, mImageDet1,posisi1, tempat1, nomor1);
+        ListActivity adapter = new ListActivity(this, mNames1, mImageUrls1, mDesc1, mImageDet1,tempat1, nomor1);
         recyclerView.setAdapter(adapter);
 
     }

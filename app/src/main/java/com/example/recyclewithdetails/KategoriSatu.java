@@ -20,7 +20,7 @@ public class KategoriSatu extends AppCompatActivity {
     private ArrayList<String> mDesc1 = new ArrayList<>();
     private ArrayList<String> mImageUrls1 = new ArrayList<>();
     private ArrayList<String> mImageDet1 = new ArrayList<>();
-    private ArrayList<String> posisi1 = new ArrayList<>();
+
     private ArrayList<String> tempat1 = new ArrayList<>();
     private ArrayList<String> nomor1 = new ArrayList<>();
     @Override
@@ -72,7 +72,7 @@ public class KategoriSatu extends AppCompatActivity {
         mNames1.add("Babi Guling Bu Oka");
         mDesc1.add("Ubud");
         mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
+
         tempat1.add("Rosario,Argentina");
         nomor1.add("10");
 
@@ -80,7 +80,7 @@ public class KategoriSatu extends AppCompatActivity {
         mNames1.add("Babi Guling Candra");
         mDesc1.add("Denpasar");
         mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
+
         tempat1.add("Rosario,Argentina");
         nomor1.add("10");
 
@@ -88,7 +88,7 @@ public class KategoriSatu extends AppCompatActivity {
         mNames1.add("Babi Guling Slingsing");
         mDesc1.add("Tabanan");
         mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
+
         tempat1.add("Rosario,Argentina");
         nomor1.add("10");
 
@@ -96,7 +96,7 @@ public class KategoriSatu extends AppCompatActivity {
         mNames1.add("Babi Guling Slingsing");
         mDesc1.add("Tabanan");
         mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
+
         tempat1.add("Rosario,Argentina");
         nomor1.add("10");
 
@@ -104,7 +104,7 @@ public class KategoriSatu extends AppCompatActivity {
         mNames1.add("Babi Guling Slingsing");
         mDesc1.add("Tabanan");
         mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
+
         tempat1.add("Rosario,Argentina");
         nomor1.add("10");
 
@@ -115,7 +115,7 @@ public class KategoriSatu extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.pork);
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        ListActivity adapter = new ListActivity(this, mNames1, mImageUrls1, mDesc1, mImageDet1,posisi1, tempat1, nomor1);
+        ListActivity adapter = new ListActivity(this, mNames1, mImageUrls1, mDesc1, mImageDet1, tempat1, nomor1);
         recyclerView.setAdapter(adapter);
 
     }

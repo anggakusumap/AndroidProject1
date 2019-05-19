@@ -39,23 +39,22 @@ public class GalleryActivity extends AppCompatActivity {
 
     private void getIncomingIntent(){
         if (getIntent().hasExtra("image_url") && getIntent().hasExtra("image_name") && getIntent().hasExtra("image_det")
-                && getIntent().hasExtra("image_desc") && getIntent().hasExtra("posisi")
+                && getIntent().hasExtra("image_desc")
                 && getIntent().hasExtra("tempat")&& getIntent().hasExtra("nomor")){
 
             String imageUrl = getIntent().getStringExtra("image_url");
             String imageName = getIntent().getStringExtra("image_name");
             String imageDet = getIntent().getStringExtra("image_det");
             String imageDesc = getIntent().getStringExtra("image_desc");
-            String posisi = getIntent().getStringExtra("posisi");
             String tempat = getIntent().getStringExtra("tempat");
             String nomor = getIntent().getStringExtra("nomor");
 
-            setImage(imageUrl,imageName,imageDet,imageDesc,posisi,tempat,nomor);
+            setImage(imageUrl,imageName,imageDet,imageDesc,tempat,nomor);
         }
 
     }
 
-    private void setImage( String imageUrl, String imageName, String imageDesc,String imageDet, String posisi, String tempat, String nomor){
+    private void setImage( String imageUrl, String imageName, String imageDesc,String imageDet, String tempat, String nomor){
         TextView name = findViewById(R.id.img_desc);
         name.setText(imageName);
         TextView det = findViewById(R.id.img_det);

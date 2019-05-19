@@ -66,6 +66,8 @@ public class GridActivity extends RecyclerView.Adapter<GridActivity.GridViewHold
                     intent = new Intent(context,Tabanan.class);
                 }else if (position==7){
                     intent = new Intent(context,Bangli.class);
+                }else if (position==8){
+                    intent = new Intent(context,Klungkung.class);
                 }
             context.startActivity(intent);
             }

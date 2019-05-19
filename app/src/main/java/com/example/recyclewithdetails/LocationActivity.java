@@ -79,32 +79,32 @@ public class LocationActivity extends AppCompatActivity  {
 //    }
 
     private void setGambar() {
-        mImageUrls1.add(R.drawable.denpasar1);
+        mImageUrls1.add(R.drawable.denpasar);
         mDesc1.add("Denpasar");
 
-        mImageUrls1.add(R.drawable.badung1);
+        mImageUrls1.add(R.drawable.badung);
         mDesc1.add("Badung");
 
-        mImageUrls1.add(R.drawable.gianyar1);
+        mImageUrls1.add(R.drawable.gianyar);
         mDesc1.add("Gianyar");
 
-        mImageUrls1.add(R.drawable.jembrana1);
+        mImageUrls1.add(R.drawable.jembrana);
         mDesc1.add("Jembrana");
 
-        mImageUrls1.add(R.drawable.karangasem1);
+        mImageUrls1.add(R.drawable.karangasem);
         mDesc1.add("Karangasem");
 
-        mImageUrls1.add(R.drawable.singaraja1);
+        mImageUrls1.add(R.drawable.singaraja);
         mDesc1.add("Singaraja");
 
         mImageUrls1.add(R.drawable.tabanan);
         mDesc1.add("Tabanan");
 
-        mImageUrls1.add(R.drawable.bangli1);
+        mImageUrls1.add(R.drawable.bangli);
         mDesc1.add("Bangli");
 
-        mImageUrls1.add(R.drawable.denpasar1);
-        mDesc1.add("Denpasar");
+        mImageUrls1.add(R.drawable.klungkung1);
+        mDesc1.add("Klungkung");
 
         showRecyleList();
     }

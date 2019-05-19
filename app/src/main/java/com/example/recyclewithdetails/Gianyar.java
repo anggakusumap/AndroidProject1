@@ -16,7 +16,7 @@ public class Gianyar extends AppCompatActivity {
     private ArrayList<String> mDesc1 = new ArrayList<>();
     private ArrayList<String> mImageUrls1 = new ArrayList<>();
     private ArrayList<String> mImageDet1 = new ArrayList<>();
-    private ArrayList<String> posisi1 = new ArrayList<>();
+
     private ArrayList<String> tempat1 = new ArrayList<>();
     private ArrayList<String> nomor1 = new ArrayList<>();
 
@@ -46,45 +46,42 @@ public class Gianyar extends AppCompatActivity {
     }
 
     private void setGambar(){
-        mImageUrls1.add("https://cdn.water-sport-bali.com/wp-content/uploads/2012/11/menu-ibu-oka-ubud.jpg");
-        mNames1.add("Babi Guling Bu Oka");
-        mDesc1.add("Ubud");
-        mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
-        tempat1.add("Rosario,Argentina");
-        nomor1.add("10");
+        mImageUrls1.add("https://www.tripsavvy.com/thmb/_pbV3fLDF_ZJiTyNf5EUFUu9nG4=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/babi-guling_ibu-oka-58351a243df78c6f6acce39c.jpg ");
+        mNames1.add("Babi Guling Ibu Oka");
+        mDesc1.add("Gianyar");
+        mImageDet1.add("Babi Guling terkenal dari Ubud Gianyar ini berhasil menjadi ikon kuliner di Ubud. Pengunjung Babi Guling kebanyakan wisatawan-wisatawan asing yang sedang berada di Ubud.");
+                tempat1.add("Jalan Tegal Sari No. 2, Ubud Tengah, Ubud, Kabupaten Gianyar ");
+        nomor1.add("Rp 50.000,-");
 
-        mImageUrls1.add("https://www.goodindonesianfood.com/story/wp-content/uploads/2016/05/bali-heritage-babi-guling-candra1-1170x780.jpg");
-        mNames1.add("Babi Guling Candra");
-        mDesc1.add("Denpasar");
-        mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
-        tempat1.add("Rosario,Argentina");
-        nomor1.add("10");
+        mImageUrls1.add("https://www.gotravelly.com/blog/wp-content/uploads/2019/03/nasi-jinggo-sambal-ijo-1024x768.jpg");
+        mNames1.add("Nasi Jinggo Gorong");
+        mDesc1.add("Gianyar");
+        mImageDet1.add("Warga Gianyar menyebutnya warung Gorong, yang dijual disini mulai dari nasi jinggo, sampai jajan jajanan dijual disini. Harganya juga murah banget!.");
+                tempat1.add("Jalan Raya Dharmagiri, Gianyar");
+        nomor1.add("Rp 5.000,-");
 
-        mImageUrls1.add("https://cdn.idntimes.com/content-images/post/20151223/slingsing-2da33ed8de1acce828ed43803489133e.PNG");
-        mNames1.add("Babi Guling Slingsing");
-        mDesc1.add("Tabanan");
-        mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
-        tempat1.add("Rosario,Argentina");
-        nomor1.add("10");
+        mImageUrls1.add("https://media.travelingyuk.com/wp-content/uploads/2018/07/Nasi-Ayam-Kedewatan-Ibu-Mangku-di-Bali-Kenikmatan-Melegenda-Sejak-1960-an-1.jpg");
+        mNames1.add("Nasi Ayam Ibu Kadewatan");
+        mDesc1.add("Gianyar");
+        mImageDet1.add("Nasi Ayam Ibu Mangku merupakan salah satu makanan legendaris di Bali yang menawarkan nasi campur ayam komplit..");
+        tempat1.add("Jl. Raya Kedewatan No.18, Kedewatan, Ubud, Kabupaten Gianyar");
+        nomor1.add("Rp 25.000,-");
 
-        mImageUrls1.add("https://cdn.idntimes.com/content-images/post/20151223/slingsing-2da33ed8de1acce828ed43803489133e.PNG");
-        mNames1.add("Babi Guling Slingsing");
-        mDesc1.add("Tabanan");
-        mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
-        tempat1.add("Rosario,Argentina");
-        nomor1.add("10");
+        mImageUrls1.add("https://gungrangga.files.wordpress.com/2017/07/sate-ikan-pantai-lebih.jpg");
+        mNames1.add("Sate Lebih Gianyar ");
+        mDesc1.add("Gianyar");
+        mImageDet1.add("Sate di pantai lebih merupakan salah satu sate ikan legendaris Bali.");
+        tempat1.add("Jl. Prof. Dr. Ida Bagus Mantra, Gianyar, Bali");
+        nomor1.add("Rp 20.000,-");
 
-        mImageUrls1.add("https://cdn.idntimes.com/content-images/post/20151223/slingsing-2da33ed8de1acce828ed43803489133e.PNG");
-        mNames1.add("Babi Guling Slingsing");
-        mDesc1.add("Tabanan");
-        mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
-        tempat1.add("Rosario,Argentina");
-        nomor1.add("10");
+        mImageUrls1.add("https://1.bp.blogspot.com/-ZDKZHvY-YaE/Wn66coKjHCI/AAAAAAAACss/Kw1YnN_hIw0_6P4Z07uGgd64x6FNI0m3gCLcBGAs/s640/20180118_091442.jpg");
+        mNames1.add("Nasi Ayam Pasar Senggol Gianyar");
+                mDesc1.add("Gianyar");
+        mImageDet1.add("Nasi Ayam di Pasar Senggol Gianyar sangat terkenal di Gianyar porsi dan isiannya yang banyak membuatnya menjadi primadona");
+        tempat1.add("Jl. Ngurah Rai, Gianyar, Bali");
+        nomor1.add("Rp 25.000,-");
+
+
 
         showRecyleList();
     }
@@ -93,7 +90,7 @@ public class Gianyar extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.lokasi_gianyar);
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        ListActivity adapter = new ListActivity(this, mNames1, mImageUrls1, mDesc1, mImageDet1,posisi1, tempat1, nomor1);
+        ListActivity adapter = new ListActivity(this, mNames1, mImageUrls1, mDesc1, mImageDet1,tempat1, nomor1);
         recyclerView.setAdapter(adapter);
 
     }

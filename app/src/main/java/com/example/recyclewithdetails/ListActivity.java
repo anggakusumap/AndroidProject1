@@ -29,7 +29,6 @@ public class ListActivity extends RecyclerView.Adapter<ListActivity.ViewHolder> 
     private ArrayList<String> mImages = new ArrayList<>();
     private ArrayList<String> mImageDesc = new ArrayList<>();
     private ArrayList<String> mImageDet = new ArrayList<>();
-    private ArrayList<String> posisi = new ArrayList<>();
     private ArrayList<String> tempat = new ArrayList<>();
     private ArrayList<String> nomor = new ArrayList<>();
 
@@ -37,13 +36,13 @@ public class ListActivity extends RecyclerView.Adapter<ListActivity.ViewHolder> 
 
     public ListActivity(Context mContext,ArrayList<String> mImageNames,
                         ArrayList<String> mImages, ArrayList<String> mImageDesc ,
-                        ArrayList<String> mImageDet,ArrayList<String> posisi,
+                        ArrayList<String> mImageDet,
                         ArrayList<String> tempat, ArrayList<String> nomor ) {
         this.mImageNames = mImageNames;
         this.mImages = mImages;
         this.mImageDesc = mImageDesc;
         this.mImageDet = mImageDet;
-        this.posisi = posisi;
+
         this.tempat = tempat;
         this.nomor = nomor;
         this.mContext = mContext;
@@ -79,7 +78,7 @@ public class ListActivity extends RecyclerView.Adapter<ListActivity.ViewHolder> 
                 intent.putExtra("image_name",mImageNames.get(i));
                 intent.putExtra("image_desc",mImageDesc.get(i));
                 intent.putExtra("image_det",mImageDet.get(i));
-                intent.putExtra("posisi",posisi.get(i));
+
                 intent.putExtra("tempat",tempat.get(i));
                 intent.putExtra("nomor",nomor.get(i));
                 mContext.startActivity(intent);
@@ -105,7 +104,7 @@ public class ListActivity extends RecyclerView.Adapter<ListActivity.ViewHolder> 
         ImageView image;
         TextView imageName;
         TextView imageDesc;
-        TextView posisi;
+
         TextView tempat;
         TextView nomor;
         CardView tampil;

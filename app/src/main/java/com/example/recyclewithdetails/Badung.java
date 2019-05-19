@@ -16,7 +16,7 @@ public class Badung extends AppCompatActivity {
     private ArrayList<String> mDesc1 = new ArrayList<>();
     private ArrayList<String> mImageUrls1 = new ArrayList<>();
     private ArrayList<String> mImageDet1 = new ArrayList<>();
-    private ArrayList<String> posisi1 = new ArrayList<>();
+
     private ArrayList<String> tempat1 = new ArrayList<>();
     private ArrayList<String> nomor1 = new ArrayList<>();
 
@@ -46,45 +46,41 @@ public class Badung extends AppCompatActivity {
     }
 
     private void setGambar(){
-        mImageUrls1.add("https://cdn.water-sport-bali.com/wp-content/uploads/2012/11/menu-ibu-oka-ubud.jpg");
-        mNames1.add("Babi Guling Bu Oka");
-        mDesc1.add("Ubud");
-        mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
-        tempat1.add("Rosario,Argentina");
-        nomor1.add("10");
+        mImageUrls1.add("https://1.bp.blogspot.com/-T7Urbd60iHA/W2FamJ2DFQI/AAAAAAAAASI/-5118Fxu3aMyBYOAD35b2v2lYAuptZKYgCLcBGAs/s1600/Sate-Bledor-1-860x484.jpg");
+        mNames1.add("Sate Bledor");
+        mDesc1.add("Badung");
+        mImageDet1.add("Sate babi yang sudah dilumuri bumbu kacang disuguhkan dalam piring plastik berukuran kecil ini memiliki rasa yang cukup unik dengan bumbu kacangnya. Sambal bejek yang terdiri dari bawang, lombok, dan bongkot juga membawa pengalaman rasa baru bagi kalian yang pertama kali mencicipi kuliner khas Bali.");
+        tempat1.add("Jalan Raya Sangeh, Sangeh, Abiansemal");
+        nomor1.add("Rp. 10.000,-");
 
-        mImageUrls1.add("https://www.goodindonesianfood.com/story/wp-content/uploads/2016/05/bali-heritage-babi-guling-candra1-1170x780.jpg");
-        mNames1.add("Babi Guling Candra");
-        mDesc1.add("Denpasar");
-        mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
-        tempat1.add("Rosario,Argentina");
-        nomor1.add("10");
 
-        mImageUrls1.add("https://cdn.idntimes.com/content-images/post/20151223/slingsing-2da33ed8de1acce828ed43803489133e.PNG");
-        mNames1.add("Babi Guling Slingsing");
-        mDesc1.add("Tabanan");
-        mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
-        tempat1.add("Rosario,Argentina");
-        nomor1.add("10");
+        mImageUrls1.add("https://cdn02.tiket.photos/img/business/i/h/business-ihsiafaf.l.jpg");
+        mNames1.add("Nasi Pedas Ibu Andika");
+        mDesc1.add("Badung");
+        mImageDet1.add("Di warung nasi ini pengunjung akan mendapati berjejer lauk pauk khas Indonesia yang menggoda selera. Misalnya ayam suir, ayam goreng, ikan goreng garing, lawar (sayuran khas Bali), sayur singkong, sayur labu, dan lainnya. ");
+        tempat1.add("Jalan Blambangan no 55");
+        nomor1.add("Rp. 30.000,-");
 
-        mImageUrls1.add("https://cdn.idntimes.com/content-images/post/20151223/slingsing-2da33ed8de1acce828ed43803489133e.PNG");
-        mNames1.add("Babi Guling Slingsing");
-        mDesc1.add("Tabanan");
-        mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
-        tempat1.add("Rosario,Argentina");
-        nomor1.add("10");
+        mImageUrls1.add("https://cdn.water-sport-bali.com/wp-content/uploads/2017/09/Nasi-Campur-Warung-Wardani-Tuban-Kuta.jpg");
+        mNames1.add("Warung Wardani Tuban");
+        mDesc1.add("Badung");
+        mImageDet1.add("Warung Wardani Tuban menyediakan sate lilit dan sambal matah yang pedas. Selain itu, warung ini juga menyediakan soto ayam dang ado-gado. ");
+        tempat1.add("Jalan Waringin no 3, Tuban");
+        nomor1.add("Rp. 37.500,-");
 
-        mImageUrls1.add("https://cdn.idntimes.com/content-images/post/20151223/slingsing-2da33ed8de1acce828ed43803489133e.PNG");
-        mNames1.add("Babi Guling Slingsing");
-        mDesc1.add("Tabanan");
-        mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
-        tempat1.add("Rosario,Argentina");
-        nomor1.add("10");
+        mImageUrls1.add("https://b.zmtcdn.com/data/pictures/6/1704596/91dc322cd871009a998eda10606a4477_featured_v2.jpg");
+        mNames1.add("Sate Babi Bawah Pohon");
+        mDesc1.add("Badung");
+        mImageDet1.add("Sate Babi Bawah Pohon menyediakan menu utama yaitu sate babi dan sate lilit. Selain itu juga menyediakan siobak babi, soto babi dan juga pepes. ");
+        tempat1.add("Jl. Campuhan I - Dewi Sri No.IV, Legian, Kuta");
+        nomor1.add("Rp. 25.000,-");
+
+        mImageUrls1.add("https://media-cdn.tripadvisor.com/media/photo-s/11/66/96/05/warung-nasi-ayam-bu-oki.jpg");
+        mNames1.add("Nasi Ayam Bu Oki");
+        mDesc1.add("Badung");
+        mImageDet1.add("Di sini kamu bisa memilih langsung ingin isian yang seperti apa. Bisa yang sedikit, sedang hingga melimpah ruah. Paduan ayam kampung yang dimasak dengan base genep (racikan rempah khas Bali), sambal matah yang wangi, renyahnya kacang dan sate lilit yang dibakar. ");
+        tempat1.add("Jl. Celagi Basur No.3Y, Jimbaran");
+        nomor1.add("Rp. 25.000,-");
 
         showRecyleList();
     }
@@ -93,7 +89,7 @@ public class Badung extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.lokasi_badung);
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        ListActivity adapter = new ListActivity(this, mNames1, mImageUrls1, mDesc1, mImageDet1,posisi1, tempat1, nomor1);
+        ListActivity adapter = new ListActivity(this, mNames1, mImageUrls1, mDesc1, mImageDet1, tempat1, nomor1);
         recyclerView.setAdapter(adapter);
 
     }

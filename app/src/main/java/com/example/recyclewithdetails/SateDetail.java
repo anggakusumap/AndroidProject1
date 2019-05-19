@@ -96,7 +96,7 @@ public class SateDetail extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.sate);
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        ListActivity adapter = new ListActivity(this, mNames1, mImageUrls1, mDesc1, mImageDet1,posisi1, tempat1, nomor1);
+        ListActivity adapter = new ListActivity(this, mNames1, mImageUrls1, mDesc1, mImageDet1, tempat1, nomor1);
         recyclerView.setAdapter(adapter);
 
     }

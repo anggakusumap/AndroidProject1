@@ -19,7 +19,7 @@ public class ListView extends AppCompatActivity {
     private ArrayList<String> mDesc = new ArrayList<>();
     private ArrayList<String> mImageUrls = new ArrayList<>();
     private ArrayList<String> mImageDet = new ArrayList<>();
-    private ArrayList<String> posisi = new ArrayList<>();
+
     private ArrayList<String> tempat = new ArrayList<>();
     private ArrayList<String> nomor = new ArrayList<>();
 
@@ -36,7 +36,7 @@ public class ListView extends AppCompatActivity {
         mNames.add("Nasi Ayam Kedewatan Ibu Mangku");
         mDesc.add("Ubud");
         mImageDet.add("24 Juni 1987");
-        posisi.add("Penyerang");
+
         tempat.add("Rosario,Argentina");
         nomor.add("10");
 
@@ -44,7 +44,7 @@ public class ListView extends AppCompatActivity {
         mNames.add("Warung Bu Komang");
         mDesc.add("Singaraja");
         mImageDet.add("Februari");
-        posisi.add("Penyerang");
+
         tempat.add("Portugal");
         nomor.add("7");
 
@@ -52,7 +52,7 @@ public class ListView extends AppCompatActivity {
         mNames.add("Warung Nasi Bali Ibu Sayu");
         mDesc.add("Tabanan");
         mImageDet.add("Februari");
-        posisi.add("Penyerang Sayap");
+
         tempat.add("Mesir");
         nomor.add("10");
 
@@ -60,7 +60,7 @@ public class ListView extends AppCompatActivity {
         mNames.add("Ayam Betutu Men Tempeh");
         mDesc.add("Jembrana");
         mImageDet.add("Februari");
-        posisi.add("Penyerang");
+
         tempat.add("Brazil");
         nomor.add("10");
 
@@ -68,7 +68,7 @@ public class ListView extends AppCompatActivity {
         mNames.add("Warung Lesehan Merta Sari");
         mDesc.add("Klungkung");
         mImageDet.add("Februari");
-        posisi.add("Penyerang");
+
         tempat.add("Perancis");
         nomor.add("7");
 
@@ -76,7 +76,7 @@ public class ListView extends AppCompatActivity {
         mNames.add("Nasi Ayam Bu Oki");
         mDesc.add("Badung");
         mImageDet.add("Februari");
-        posisi.add("Winger");
+
         tempat.add("Belgia");
         nomor.add("10");
     showRecyleList();
@@ -86,7 +86,7 @@ public class ListView extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.recyclerv_view4);
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        ListActivity adapter = new ListActivity(this, mNames, mImageUrls, mDesc, mImageDet,posisi, tempat, nomor);
+        ListActivity adapter = new ListActivity(this, mNames, mImageUrls, mDesc, mImageDet, tempat, nomor);
         recyclerView.setAdapter(adapter);
 
     }

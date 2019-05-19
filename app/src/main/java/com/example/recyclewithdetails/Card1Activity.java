@@ -26,7 +26,6 @@ public class Card1Activity extends RecyclerView.Adapter<Card1Activity.ViewHolder
     private ArrayList<String> mImages1 = new ArrayList<>();
     private ArrayList<String> mImageDesc1 = new ArrayList<>();
     private ArrayList<String> mImageDet1 = new ArrayList<>();
-    private ArrayList<String> posisi1 = new ArrayList<>();
     private ArrayList<String> tempat1 = new ArrayList<>();
     private ArrayList<String> nomor1 = new ArrayList<>();
 
@@ -34,13 +33,13 @@ public class Card1Activity extends RecyclerView.Adapter<Card1Activity.ViewHolder
 
     public Card1Activity(Context mContext1, ArrayList<String> mImageNames1,
                          ArrayList<String> mImages1, ArrayList<String> mImageDesc1 ,
-                         ArrayList<String> mImageDet1, ArrayList<String> posisi1,
+                         ArrayList<String> mImageDet1,
                          ArrayList<String> tempat1, ArrayList<String> nomor1) {
         this.mImageNames1 = mImageNames1;
         this.mImages1 = mImages1;
         this.mImageDesc1 = mImageDesc1;
         this.mImageDet1 = mImageDet1;
-        this.posisi1 = posisi1;
+
         this.tempat1 = tempat1;
         this.nomor1 = nomor1;
         this.mContext1 = mContext1;
@@ -78,7 +77,6 @@ public class Card1Activity extends RecyclerView.Adapter<Card1Activity.ViewHolder
                 intent.putExtra("image_desc",mImageDesc1.get(i));
                 intent.putExtra("image_name",mImageNames1.get(i));
                 intent.putExtra("image_det",mImageDet1.get(i));
-                intent.putExtra("posisi",posisi1.get(i));
                 intent.putExtra("tempat",tempat1.get(i));
                 intent.putExtra("nomor",nomor1.get(i));
                 mContext1.startActivity(intent);

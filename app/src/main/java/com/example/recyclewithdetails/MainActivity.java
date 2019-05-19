@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<String> mDesc1 = new ArrayList<>();
     private ArrayList<String> mImageUrls1 = new ArrayList<>();
     private ArrayList<String> mImageDet1 = new ArrayList<>();
-    private ArrayList<String> posisi1 = new ArrayList<>();
+
     private ArrayList<String> tempat1 = new ArrayList<>();
     private ArrayList<String> nomor1 = new ArrayList<>();
     private ArrayList<String> mNames2 = new ArrayList<>();
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         mNames1.add("Babi Guling Candra");
         mDesc1.add("Denpasar");
         mImageDet1.add("Babi Guling Candra merupakan babi guling terkenal di Denpasar yang banyak dikunjungi oleh wisatawan asing");
-        posisi1.add("Penyerang");
+
         tempat1.add("Jl. Teuku Umar No.140, Dauh Puri Kauh, Denpasar ");
         nomor1.add("Rp. 50.000,-");
 
@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView1.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         recyclerView2.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
         CardActivity adapter1 = new CardActivity(this, mNames, mImageUrls, mDesc, mImageDet, posisi, tempat, nomor);
-        Card1Activity adapter = new Card1Activity(this, mNames1, mImageUrls1, mDesc1, mImageDet1, posisi1, tempat1, nomor1);
+        Card1Activity adapter = new Card1Activity(this, mNames1, mImageUrls1, mDesc1, mImageDet1,  tempat1, nomor1);
         Card2Activity adapter2 = new Card2Activity(this, mNames2, mImageUrls2, mDesc2, mImageDet2, posisi2, tempat2, nomor2);
         recyclerView.setAdapter(adapter1);
         recyclerView1.setAdapter(adapter);
@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recyclerView1 = findViewById(R.id.recyclerv_view1);
         recyclerView1.setNestedScrollingEnabled(false);
         recyclerView1.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
-        Card1Activity adapter = new Card1Activity(this, mNames, mImageUrls, mDesc, mImageDet, posisi, tempat, nomor);
+        Card1Activity adapter = new Card1Activity(this, mNames, mImageUrls, mDesc, mImageDet, tempat, nomor);
         recyclerView1.setAdapter(adapter);
 
     }
@@ -184,19 +184,19 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.recyclerv_view4);
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        ListActivity adapter = new ListActivity(this, mNames, mImageUrls, mDesc, mImageDet,posisi, tempat, nomor);
+        ListActivity adapter = new ListActivity(this, mNames, mImageUrls, mDesc, mImageDet,tempat, nomor);
         recyclerView.setAdapter(adapter);
 
     }
 
-    private void showRecyclerGrid() {
-        RecyclerView recyclerView = findViewById(R.id.recyclerv_view);
-        recyclerView.setHasFixedSize(false);
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
-        GridActivity adapter = new GridActivity(this, mImageUrls);
-        recyclerView.setAdapter(adapter);
-
-    }
+//    private void showRecyclerGrid() {
+//        RecyclerView recyclerView = findViewById(R.id.recyclerv_view);
+//        recyclerView.setHasFixedSize(false);
+//        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+//        GridActivity adapter = new GridActivity(this, mImageUrls);
+//        recyclerView.setAdapter(adapter);
+//
+//    }
 
     private void setActionBarTitle(String title) {
         getSupportActionBar().setTitle(title);

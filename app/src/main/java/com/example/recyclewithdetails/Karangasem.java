@@ -16,7 +16,7 @@ public class Karangasem extends AppCompatActivity {
     private ArrayList<String> mDesc1 = new ArrayList<>();
     private ArrayList<String> mImageUrls1 = new ArrayList<>();
     private ArrayList<String> mImageDet1 = new ArrayList<>();
-    private ArrayList<String> posisi1 = new ArrayList<>();
+
     private ArrayList<String> tempat1 = new ArrayList<>();
     private ArrayList<String> nomor1 = new ArrayList<>();
 
@@ -50,39 +50,7 @@ public class Karangasem extends AppCompatActivity {
         mNames1.add("Babi Guling Bu Oka");
         mDesc1.add("Ubud");
         mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
-        tempat1.add("Rosario,Argentina");
-        nomor1.add("10");
 
-        mImageUrls1.add("https://www.goodindonesianfood.com/story/wp-content/uploads/2016/05/bali-heritage-babi-guling-candra1-1170x780.jpg");
-        mNames1.add("Babi Guling Candra");
-        mDesc1.add("Denpasar");
-        mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
-        tempat1.add("Rosario,Argentina");
-        nomor1.add("10");
-
-        mImageUrls1.add("https://cdn.idntimes.com/content-images/post/20151223/slingsing-2da33ed8de1acce828ed43803489133e.PNG");
-        mNames1.add("Babi Guling Slingsing");
-        mDesc1.add("Tabanan");
-        mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
-        tempat1.add("Rosario,Argentina");
-        nomor1.add("10");
-
-        mImageUrls1.add("https://cdn.idntimes.com/content-images/post/20151223/slingsing-2da33ed8de1acce828ed43803489133e.PNG");
-        mNames1.add("Babi Guling Slingsing");
-        mDesc1.add("Tabanan");
-        mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
-        tempat1.add("Rosario,Argentina");
-        nomor1.add("10");
-
-        mImageUrls1.add("https://cdn.idntimes.com/content-images/post/20151223/slingsing-2da33ed8de1acce828ed43803489133e.PNG");
-        mNames1.add("Babi Guling Slingsing");
-        mDesc1.add("Tabanan");
-        mImageDet1.add("24 Juni 1987");
-        posisi1.add("Penyerang");
         tempat1.add("Rosario,Argentina");
         nomor1.add("10");
 
@@ -93,7 +61,7 @@ public class Karangasem extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.lokasi_karangasem);
         recyclerView.setHasFixedSize(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        ListActivity adapter = new ListActivity(this, mNames1, mImageUrls1, mDesc1, mImageDet1,posisi1, tempat1, nomor1);
+        ListActivity adapter = new ListActivity(this, mNames1, mImageUrls1, mDesc1, mImageDet1, tempat1, nomor1);
         recyclerView.setAdapter(adapter);
 
     }
